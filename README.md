@@ -45,7 +45,7 @@ A sleek, modular Flutter app for browsing **courses**, **mentors**, and navigati
 ![Courses Screen](screenshots/courses.png)
 
 ### 👩‍🏫 Mentors Screen
-![Mentors Screen](screenshots/mentors.png)
+![Mentors Screen](screenshots/mentor.png)
 
 ---
 
