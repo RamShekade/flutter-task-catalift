@@ -50,61 +50,48 @@ class _CoursesScreenState extends State<CoursesScreen> {
   Widget buildCourseCard(Course course) {
     return Container(
       width: 200,
+      height: 400, // 👈 increase this as needed (was missing before)
       margin: EdgeInsets.only(right: 12),
       child: Card(
         elevation: 2,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.asset(
                 course.imagePath,
-                height: 100,
+                height: 100, // 👈 adjust image height here
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    course.title,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    course.type,
-                    style: TextStyle(color: Colors.grey[600], fontSize: 12),
-                  ),
-                  SizedBox(height: 4),
-                  Text(course.duration, style: TextStyle(fontSize: 12)),
-                  SizedBox(height: 4),
-                  Text(
-                    course.price,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        // Handle enroll
-                      },
-                      child: Text("Enroll", style: TextStyle(fontSize: 12)),
-                      style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
+            Expanded(
+              // 👈 make sure remaining content fills the rest
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      course.title,
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                  ),
-                ],
+                    SizedBox(height: 4),
+                    Text(
+                      course.type,
+                      style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                    ),
+                    SizedBox(height: 4),
+                    Text(course.duration, style: TextStyle(fontSize: 12)),
+                    SizedBox(height: 4),
+                    Text(
+                      course.price,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

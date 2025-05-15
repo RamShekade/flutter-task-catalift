@@ -9,6 +9,7 @@ class CataliftApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Catalift',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       initialRoute: '/home',
