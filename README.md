@@ -19,7 +19,6 @@ A sleek, modular Flutter app for browsing **courses**, **mentors**, and navigati
 - Each course includes:
   - Thumbnail image
   - Title, type, duration, and price
-  - **"Enroll"** button
 - UI ensures proper layout and no overflow with scrollable cards.
 
 ### 👩‍🏫 Mentors Screen
@@ -86,12 +85,8 @@ flutter run
 📌 Notes
 Lottie animation integration assumed in the home screen.
 
-Enroll buttons currently trigger no action (hook up to backend or enrollment logic).
-
 UI based on SVG layout reference shared by design.
 
-📷 Screenshots
-(Add relevant screenshots of Home, Courses, Mentors screens here.)
 
 📄 License
 This project is developed as part of an internship/hiring task and is private to the Catalift team.
